@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { CartItem } from './cart-item/cart-item';
 import { CartService } from '../../services/cart';
+import { OrderSummary } from "./order-summary/order-summary";
 
 @Component({
   selector: 'app-cart',
-  imports: [CartItem,],
+  imports: [CartItem, OrderSummary],
   template: `
     <div class="p-6 flex flex-col gap-4">
       <h2 class="text-2xl font-bold">Your Cart</h2>
@@ -12,6 +13,7 @@ import { CartService } from '../../services/cart';
         <app-cart-item [item]="item" />
       }
     </div>
+    <app-order-summary />
   `,
   styles: ``
 })
