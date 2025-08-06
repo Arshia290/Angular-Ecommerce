@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { PrimaryButton } from '../primary-button/primary-button';
-import { Cart } from '../../services/cart';
+import { CartService } from '../../services/cart';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -18,6 +18,6 @@ import { RouterLink } from '@angular/router';
 })
 export class Header {
   
-  cartService = inject(Cart);
+  cartService = inject(CartService);
 
 }
